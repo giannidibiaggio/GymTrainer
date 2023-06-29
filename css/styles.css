@@ -381,4 +381,147 @@ footer .containerfooter .footerlinks {
   font-size: 2em;
 }
 
+/* MEDIA QUERY TABLET */
+@media screen and (max-width: 768px) {
+  /* INICIO */
+  .tittleinicio {
+    font-size: 4em;
+  }
+  .titulo-gymtrainer {
+    font-size: 4em;
+  }
+  .logonav {
+    height: 150px;
+  }
+  #inicio {
+    padding: 25em;
+  }
+  .tittle2Inicio {
+    font-size: 5em;
+  }
+  .tittle3Inicio {
+    font-size: 4em;
+  }
+  button {
+    padding: 10px 18px;
+  }
+  /* EJERCICIOS */
+  .containerEjercicios {
+    grid-template-columns: none;
+    grid-template-rows: repeat(1, 1fr);
+    max-width: none;
+    margin: none;
+  }
+  .gifsejercicios {
+    width: 100%;
+  }
+  .tittlejercicios {
+    font-size: 5em;
+  }
+  /* GANAR MASA */
+  .tittlegmh1 {
+    font-size: 6em;
+  }
+  .tittlegmh2 {
+    font-size: 2.5em;
+  }
+  .tittlegmh3 {
+    font-size: 2.5em;
+  }
+  .tittlegmh4 {
+    font-size: 2.5em;
+  }
+  .textogm {
+    font-size: 2em;
+  }
+  /* PERDER GRASA */
+  .tittlepgh1 {
+    font-size: 6em;
+  }
+  .tittlepgh2 {
+    font-size: 2.5em;
+  }
+  .tittlepgh3 {
+    font-size: 2.5em;
+  }
+  .textopg {
+    font-size: 2em;
+  }
+  /* CONTACTO */
+  .contactoformulario {
+    width: 100%;
+  }
+}
+/* MEDIA QUERY CELULAR */
+@media screen and (max-width: 500px) {
+  /* INICIO */
+  .tittleinicio {
+    font-size: 3em;
+  }
+  .titulo-gymtrainer {
+    font-size: 3em;
+  }
+  .logonav {
+    height: 100px;
+  }
+  #inicio {
+    padding: 20em;
+  }
+  .tittle2Inicio {
+    font-size: 4.5em;
+  }
+  .tittle3Inicio {
+    font-size: 3em;
+  }
+  button {
+    padding: 8px 15px;
+  }
+  /* EJERCICIOS */
+  .containerEjercicios {
+    grid-template-columns: none;
+    grid-template-rows: repeat(1, 1fr);
+    max-width: none;
+    margin: none;
+  }
+  .gifsejercicios {
+    width: 100%;
+  }
+  .tittlejercicios {
+    font-size: 5em;
+  }
+  /* GANAR MASA */
+  .tittlegmh1 {
+    font-size: 6em;
+  }
+  .tittlegmh2 {
+    font-size: 2.5em;
+  }
+  .tittlegmh3 {
+    font-size: 2.5em;
+  }
+  .tittlegmh4 {
+    font-size: 2.5em;
+  }
+  .textogm {
+    font-size: 2em;
+  }
+  /* PERDER GRASA */
+  .tittlepgh1 {
+    font-size: 6em;
+  }
+  .tittlepgh2 {
+    font-size: 2.5em;
+  }
+  .tittlepgh3 {
+    font-size: 2.5em;
+  }
+  .textopg {
+    font-size: 2em;
+  }
+  /* CONTACTO */
+  .contactoformulario {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
