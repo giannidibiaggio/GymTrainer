@@ -1,0 +1,868 @@
+@import "variables";
+/* HTML */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Coming Soon", cursive;
+    font-family: "Inconsolata", monospace;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url(../imagenes/chevron.jpg);
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+
+  /* MIXIN */
+
+  @mixin flex{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin titulosPaginas{
+    padding: 150px 12px;
+    background-color: #e0e3e3;
+  }
+
+  /* EXTEND */
+
+  .boton{
+    display: inline-flex;
+    padding: 16px 76px;
+    background-color: #ffffff;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 8px;
+  }
+
+  .boton:hover{
+    background-color: #323e47;
+    }
+
+  .boton--masgrande{
+    @extend .boton;
+    padding: 23px 60px;
+  }
+
+  /* BOOSTRAP NAV */
+  header{
+    .container-fluid {
+        background-color: #303E49;
+        .logonav {
+            height: 15%;
+          }
+        .nav-link {
+            font-size: 2.5em;
+            font-weight: bolder;
+            color: white;
+            margin: 25px;
+          }
+      }
+    }
+    /* INICIO */
+    #inicio {
+        @include flex;
+        flex-direction: column;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(../imagenes/hombre-fuerte-entrenando-gimnasio.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 45em;
+
+        .tittleinicio {
+            font-size: 4em;
+            color: white;
+          }
+
+        form{
+            button {
+              display: inline-flex;
+              padding: 15px 75px;
+              background-color: #ffffff;
+              color: black;
+              align-items: center;
+              justify-content: center;
+              font-size: 30px;
+              font-weight: 500;
+              border: none;
+              cursor: pointer;
+              text-transform: uppercase;
+              transition: .3s ease all;
+              border-radius: 8px;
+              }
+            button:hover{
+              background-color: #323e47;
+              }
+          }
+    }
+      
+     section{
+        .gymtrainer {
+            color: black;
+            font-size: 1.8em;
+            text-align: center;
+            padding: 300px 12px;
+
+            .titulo-gymtrainer {
+                text-align: center;
+                color: black;
+                font-size: 4em;
+                text-decoration: underline;
+                span{
+                  color: #266697 ;
+                }
+              }
+          }
+        .contenido-main {
+            text-align: center;
+            background-color: #1b4e75;
+            padding: 200px 12px;
+            .tittle2Inicio {
+                font-size:6em;
+                color: white;
+            }
+            .objetivos1{
+                margin: 30px 100px 100px 100px;
+                .tittle3Inicio {
+                    font-size: 4.3em;
+                    color: white;
+                    text-decoration: underline;
+                  }
+                  .textoInicio {
+                    color: white;
+                    font-size: 2em;
+                    font-weight: 50%;
+                    background-color: #1b4e75;
+                  }
+                  .boton--masgrande{
+                    @extend .boton;
+                    padding: 23px 60px;
+                  }
+            }
+            .objetivos2{
+                .tittle3Inicio {
+                    font-size: 4.3em;
+                    color: white;
+                    text-decoration: underline;
+                  }
+                .textoInicio {
+                    color: white;
+                    font-size: 2em;
+                    font-weight: 50%;
+                    background-color: #1b4e75;
+                  }
+                .boton--masgrande{
+                  @extend .boton;
+                  padding: 23px 60px;
+                  } 
+            } 
+          }  
+    }
+
+    /* FOOTER */     
+    footer{
+        .containerfooter{
+            @include flex;
+            flex-direction: column;
+            background-color: #303e49;
+          
+            .tittlefooter{
+                font-size: 3em;
+                color: white; 
+                padding-top: 10px;
+              }
+            .copy{
+                font-size: 2.5em ;
+                color: white;
+              }
+            .footerlinks{
+                font-size: 2em;
+                margin: 5px;
+                color: white;
+              }
+            }
+        }
+    
+
+    /* GANAR MASA MUSCULAR */
+ 
+    .maingm {
+      @include titulosPaginas;
+          .tittlegmh1 {
+              text-decoration: underline;
+              text-align: center;
+              color: #302d3c;
+              font-size: 8em;
+            }
+          .textotitulo {
+              font-size: 3em;
+              color: #57555d;
+              text-align: center;
+            }
+        }
+  .containergm {
+      width: 95%;
+      max-width: 1000px;
+      margin: 1.6em auto;
+    
+      display: grid;
+      gap: 1.6em;
+      grid-template-rows: repeat(1, 1fr);
+
+      .tittlegmh2 {
+          background-color: #1e272e;
+          color: white;
+          font-size: 3.5em;
+          text-align: center;
+          padding: 25px;
+        }
+      .tittlegmh3 {
+          background-color: #1e272e;
+          color: white;
+          font-size: 3.5em;
+          text-align: center;
+          padding: 10px;
+          margin: 30px 0px 30px 0px;
+        }
+      .sectionEntrenamiento{
+          .tittlegmh4 {
+              font-size: 4.5em;
+              text-decoration: underline;
+              text-align: center;
+              font-weight: 900;
+              margin:30px;
+            }
+          .textogm {
+              font-size: $TamanoDeTexto;
+            }
+          .sobrecargaprogresiva {
+              width: $TamanoDeImg;
+            }
+          .piramide {
+              width: $TamanoDeImg;
+            }
+          .piramidenutricional {
+              width: $TamanoDeImg;
+            }  
+      }   
+    }
+
+  /* PERDER GRASA */
+  .mainpg {
+    @include titulosPaginas;
+      .tittlepgh1 {
+          text-decoration: underline;
+          text-align: center;
+          color: #302d3c;
+          font-size: 7.5em;
+        }
+      .textotitulo {
+          font-size: 3em;
+          color: #57555d;
+          text-align: center;
+        }    
+    }
+  .containerpg {
+      width: 95%;
+      max-width: 1000px;
+      margin: 1.6em auto;
+    
+      display: grid;
+      gap: 1.6em;
+      grid-template-rows: repeat(1, 1fr);
+
+      .sectionpg{
+          .textopg {
+              font-size: $TamanoDeTexto;
+            } 
+          .tittlepgh2 {
+              background-color: #1e272e;
+              color: white;
+              font-size: 3.5em;
+              text-align: center;
+              padding: 25px;
+              margin: 30px 0px 30px 0px;
+            }
+          .tittlepgh3 {
+              background-color: #1e272e;
+              color: white;
+              font-size: 3.5em;
+              text-align: center;
+              padding: 10px;
+              margin: 30px 0px 30px 0px;
+            }
+          .triadapg {
+              width: $TamanoDeImg;
+            } 
+          .deficitcalorico {
+              width: $TamanoDeImg;
+            }  
+      }
+    }
+
+    /* EJERCICIOS   */
+    
+    .mainEjercicios {
+      @include titulosPaginas;
+      .tittlejercicios {
+          text-decoration: underline;
+          text-align: center;
+          color: #302d3c;
+          font-size: 7.5em;
+        }
+        .textoejercicios {
+          font-size: 2em;
+          color: #57555d;
+          text-align: center;
+        }
+    }
+    .containerEjercicios {
+      width: 90%;
+      max-width: 1200px;
+      margin: 1.6em auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: #296da1;
+      .sectionEjercicios {
+          padding: 20px;
+          border: 1px solid black;
+          .titulosejercicios{
+              background-color: #1e272e;
+              color: white;
+              font-size: 3.5em;
+              text-align: center;
+              padding: 17px;
+              margin: 15px 0px 0px 0px;
+              grid-column: 1/3;
+            }
+            .articleEjercicios {
+              background-color: #296da1;
+              padding: 20px;
+              margin-top: 20px;
+              .texto2ejercicios {
+                  font-size: 2.2em;
+                  color: white;
+                  font-weight: 500;
+                }
+            }
+        }
+        .asideEjercicios {
+          padding: 40px;
+          border: 1px solid black;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+        }
+    }
+
+    /* CONTACTO*/
+
+    .contacto {
+      @include titulosPaginas;
+      .tittlecontacto {
+          text-decoration: underline;
+          text-align: center;
+          color: #302d3c;
+          font-size: 5em;
+        }
+        .textocontacto {
+          font-size: 2.5em;
+          text-align: center;
+          color: #57555d;
+        }
+    }
+
+    .contactoformulario {
+      width: 1000px;
+      background-color: #303E49;
+      padding: 40px;
+      margin: auto;
+      margin-top: 70px;
+      margin-bottom: 50px;
+      border-radius: 5px;
+      .textocontacto {
+          font-size: 2.5em;
+          text-align: center;
+          color: white;
+        }
+        .formulario {
+          width: 100%;
+          background-color: white;
+          padding: 20px;
+          border-radius: 4px;
+          margin-bottom: 60px;
+          color: black;
+          font-size: 2em;
+          
+        }          
+    }
+
+    /* MEDIA QUERYS TABLET */
+    @media screen and (max-width: 900px){
+      /* INICIO */
+      #inicio{
+        padding: 30em;
+        .inicio{
+        .tittleinicio{
+            font-size: 4em;
+        }
+        }   
+      }
+      section{
+      .gymtrainer{
+          .titulo-gymtrainer{
+              font-size: 4em;
+          }
+        }
+      }
+    .contenido-main{
+        .tittle2Inicio{
+            font-size: 5em;
+        }
+        .objetivos1{
+            .tittle3Inicio{
+                font-size: 4em;
+            }
+
+        }
+    }
+    .container-fluid{
+        .logonav{
+            height: 150px;
+        }
+    }
+      button{
+        padding: 10px 18px;
+      }
+    
+      /* EJERCICIOS */
+      .mainEjercicios{
+        .tittlejercicios{
+          font-size: 5em;
+        }
+      }
+
+      .containerEjercicios {
+        grid-template-columns: none;
+        grid-template-rows: repeat(1, 1fr);
+    
+        max-width: none;
+        margin: none;
+        .gifsejercicios {
+          width: 100%;
+        }  
+      }
+    
+      /* GANAR MASA */
+      .maingm{
+      .tittlegmh1{
+        font-size: 6em;
+        }
+      }
+      .containergm{
+        .tittlegmh2{
+          font-size: 2.5em;
+        }
+        .tittlegmh3{
+          font-size: 2.5em;
+        }
+        .tittlegmh4{
+        font-size: 2.5em; 
+        }
+        .textogm{
+          font-size: 2em;
+        }
+      }   
+      /* PERDER GRASA */
+      .mainpg{
+        .tittlepgh1{
+          font-size: 6em;
+        }
+      }
+      .containerpg{
+        .sectionpg{
+          .tittlepgh2{
+            font-size: 2.5em;
+          }
+          .tittlepgh3{
+            font-size: 2.5em;
+          }
+          .textopg{
+            font-size: 2em;
+          }
+        }
+      }
+
+      /* CONTACTO */
+      .contactoformulario{
+        width: 100%;
+      }
+    }
+ /* MEDIA QUERYS TABLET */
+    @media screen and (max-width: 768px){
+      /* INICIO */
+      #inicio{
+        padding: 25em;
+        .inicio{
+        .tittleinicio{
+            font-size: 4em;
+        }
+        }   
+      }
+      section{
+      .gymtrainer{
+          .titulo-gymtrainer{
+              font-size: 4em;
+          }
+        }
+      }
+    .contenido-main{
+        .tittle2Inicio{
+            font-size: 5em;
+        }
+        .objetivos1{
+            .tittle3Inicio{
+                font-size: 4em;
+            }
+
+        }
+    }
+    .container-fluid{
+        .logonav{
+            height: 150px;
+        }
+    }
+      button{
+        padding: 10px 18px;
+      }
+    
+      /* EJERCICIOS */
+      .mainEjercicios{
+        .tittlejercicios{
+          font-size: 5em;
+        }
+      }
+
+      .containerEjercicios {
+        grid-template-columns: none;
+        grid-template-rows: repeat(1, 1fr);
+    
+        max-width: none;
+        margin: none;
+        .gifsejercicios {
+          width: 100%;
+        }  
+      }
+    
+      /* GANAR MASA */
+      .maingm{
+      .tittlegmh1{
+        font-size: 6em;
+        }
+      }
+      .containergm{
+        .tittlegmh2{
+          font-size: 2.5em;
+        }
+        .tittlegmh3{
+          font-size: 2.5em;
+        }
+        .tittlegmh4{
+        font-size: 2.5em; 
+        }
+        .textogm{
+          font-size: 2em;
+        }
+      }   
+      /* PERDER GRASA */
+      .mainpg{
+        .tittlepgh1{
+          font-size: 6em;
+        }
+      }
+      .containerpg{
+        .sectionpg{
+          .tittlepgh2{
+            font-size: 2.5em;
+          }
+          .tittlepgh3{
+            font-size: 2.5em;
+          }
+          .textopg{
+            font-size: 2em;
+          }
+        }
+      }
+
+      /* CONTACTO */
+      .contactoformulario{
+        width: 100%;
+      }
+    }
+/* MEDIA QUERYES MOBILE */
+    @media screen and (max-width: 500px) {
+      /* INICIO */
+        #inicio{
+          padding: 10em;
+            .inicio{
+            .tittleinicio{
+                font-size: 3em;
+            }
+            .boton{
+                padding:5px 10px;
+                font-size: 20px;
+              }
+          }   
+      }
+      section{
+        .gymtrainer{
+            .titulo-gymtrainer{
+                font-size: 3em;
+            }
+        }
+      }
+      
+      .contenido-main{
+        .tittle2Inicio{
+            font-size: 4em;
+        }
+        .objetivos1{
+            .tittle3Inicio{
+                font-size: 3.3em;
+            }
+            .boton{
+              padding:5px 10px;
+              font-size: 20px;
+            }
+            .textoInicio{
+              font-size: 1.8em;
+            }
+        }
+        .objetivos2{
+          .tittle3Inicio{
+            font-size: 3.3em;
+          }
+          .boton{
+          padding:5px 10px;
+          font-size: 20px;
+          }
+          .textoInicio{
+            font-size: 1.8em;
+          }
+       }
+      }
+    
+    
+    .container-fluid{
+        .logonav{
+            height: 100px;
+        }
+    }
+
+    /* EJERCICIOS */
+    .mainEjercicios{
+      .tittlejercicios{
+        font-size: 5em;
+      }
+    }
+
+    .containerEjercicios {
+      grid-template-columns: none;
+      grid-template-rows: repeat(1, 1fr);
+  
+      max-width: none;
+      margin: none;
+      .gifsejercicios {
+        width: 100%;
+      }  
+    }
+  
+    /* GANAR MASA */
+    .maingm{
+    .tittlegmh1{
+      font-size: 6em;
+      }
+    }
+    .containergm{
+      .tittlegmh2{
+        font-size: 2.5em;
+      }
+      .tittlegmh3{
+        font-size: 2.5em;
+      }
+      .tittlegmh4{
+      font-size: 2.5em; 
+      }
+      .textogm{
+        font-size: 2em;
+      }
+    }   
+    /* PERDER GRASA */
+    .mainpg{
+      .tittlepgh1{
+        font-size: 6em;
+      }
+    }
+    .containerpg{
+      .sectionpg{
+        .tittlepgh2{
+          font-size: 2.5em;
+        }
+        .tittlepgh3{
+          font-size: 2.5em;
+        }
+        .textopg{
+          font-size: 2em;
+        }
+      }
+    }
+
+    /* CONTACTO */
+    .contactoformulario{
+      width: 100%;
+    }
+  
+    }
+    
+  
+    
+    /* MEDIA QUERY MOBILE */
+    @media screen and (max-width: 375px)  {
+      /* INICIO */
+      #inicio{
+          padding: 15em;
+            .inicio{
+            .tittleinicio{
+                font-size: 3em;
+            }
+            .boton{
+                padding:5px 10px;
+                font-size: 20px;
+              }
+          }   
+      }
+      section{
+        .gymtrainer{
+            .titulo-gymtrainer{
+                font-size: 2.5em;
+            }
+        }
+      
+        .contenido-main{
+          .tittle2Inicio{
+              font-size: 4em;
+          }
+          .objetivos1{
+              .tittle3Inicio{
+                  font-size: 3.3em;
+              }
+              .boton{
+                padding:5px 10px;
+                font-size: 20px;
+              }
+              .textoInicio{
+                font-size: 1.8em;
+              }
+          }
+          .objetivos2{
+            .tittle3Inicio{
+              font-size: 3.3em;
+            }
+            .boton{
+            padding:5px 10px;
+            font-size: 20px;
+            }
+            .textoInicio{
+              font-size: 1.8em;
+            }
+         }
+        }
+      }
+      
+      .container-fluid{
+          .logonav{
+              height: 100px;
+          }
+      }
+
+      /* EJERCICIOS */
+      .mainEjercicios{
+        .tittlejercicios{
+          font-size: 5em;
+        }
+      }
+
+      .containerEjercicios {
+        grid-template-columns: none;
+        grid-template-rows: repeat(1, 1fr);
+    
+        max-width: none;
+        margin: none;
+        .gifsejercicios {
+          width: 100%;
+        }  
+      }
+    
+      /* GANAR MASA */
+      .maingm{
+      .tittlegmh1{
+        font-size: 6em;
+        }
+      }
+      .containergm{
+        .tittlegmh2{
+          font-size: 2.5em;
+        }
+        .tittlegmh3{
+          font-size: 2.5em;
+        }
+        .tittlegmh4{
+        font-size: 2.5em; 
+        }
+        .textogm{
+          font-size: 2em;
+        }
+      }   
+      /* PERDER GRASA */
+      .mainpg{
+        .tittlepgh1{
+          font-size: 6em;
+        }
+      }
+      .containerpg{
+        .sectionpg{
+          .tittlepgh2{
+            font-size: 2.5em;
+          }
+          .tittlepgh3{
+            font-size: 2.5em;
+          }
+          .textopg{
+            font-size: 2em;
+          }
+        }
+      }
+
+      /* CONTACTO */
+      .contactoformulario{
+        width: 100%;
+      }
+    } 
